@@ -72,7 +72,7 @@ class Worker {
 
       while (conn == null) {
         try {
-          conn = DriverManager.getConnection(url, "postgres", "");
+          conn = DriverManager.getConnection(url, "postgres", "password");
         } catch (SQLException e) {
           System.err.println("Failed to connect to db - retrying");
           sleep(1000);
